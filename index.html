@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>8-bit Computer Emulator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class = "main-container">
+        <div class="line-container">
+            <h1>Yhyno 2E: a computer emulator</h1>
+        </div>
+        <div class = "line-container" id = "computer-interface">
+            <div class = "interface-container" id = "registers">
+                <div class="register">
+                    <h2>X</h2>
+                    <div class="diode-row" id="register-x">
+                        <div class="diode off"></div>
+                        <div class="diode off"></div>
+                        <div class="diode off"></div>
+                        <div class="diode off"></div>
+                        <div class="diode off"></div>
+                        <div class="diode off"></div>
+                        <div class="diode off"></div>
+                        <div class="diode off"></div>
+                    </div>
+                </div>
+        
+                <div class="register">
+                    <h2>A</h2>
+                    <div class="diode-row" id="register-a">
+                        <div class="diode off"></div>
+                        <div class="diode off"></div>
+                        <div class="diode off"></div>
+                        <div class="diode off"></div>
+                        <div class="diode off"></div>
+                        <div class="diode off"></div>
+                        <div class="diode off"></div>
+                        <div class="diode off"></div>
+                    </div>
+                </div>
+        
+                <div class="register">
+                    <h2>Index</h2>
+                    <div class="diode-row" id="memory-index">
+                        <div class="diode off"></div>
+                        <div class="diode off"></div>
+                        <div class="diode off"></div>
+                        <div class="diode off"></div>
+                        <div class="diode off"></div>
+                        <div class="diode off"></div>
+                        <div class="diode off"></div>
+                        <div class="diode off"></div>
+                    </div>
+                </div>
+            </div>
+            <div class = "interface-container" id = "flags">
+                <div class="register">
+                    <h2>A > 255</h2>
+                    <div class="diode-row">
+                        <div class="diode off" id="overflow-flag"></div>
+                    </div>
+                </div>
+                <div class="register">
+                    <h2>Idle</h2>
+                    <div class="diode-row">
+                        <div class="diode off" id="idle-flag"></div>
+                    </div>
+                </div>
+                <div class="register">
+                    <h2>On</h2>
+                    <div class="diode-row">
+                        <div class="diode off" id="clock-flag"></div>
+                    </div>
+                </div>
+                
+            </div>
+            <div class = "interface-container" id = "tape">
+                <div class = "register">
+                    <h2>Tape Reader</h2>
+                    <textarea id = "tape-instructions" rows="10" cols="50" placeholder="Your instructions go here."></textarea>
+                </div>
+                <div class="register">
+                    <h2>Load Tape</h2>
+                    <div class="diode-row">
+                        <div class="button off" id="tape-button"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class = "line-container description">
+            <p>
+                Press [SHIFT] to start the computer.<br>
+                [=] stops the computer, and [ESCAPE] resets the it, but keeps user memory.
+            </p>
+            <p class = 'grey-text'>
+                <b>Use:</b><br>
+                <br>
+                To set the index at the beginning of user memory, press [S]. You need to do this before loading.<br>
+                To load from tape, press [T], and press "Load Tape". Then wait the tape finishes loading (the diode switches off).<br>
+                To step-inspect user memory (starting from 0x30), press [I]. You will step through each byte individually.<br>
+                To execute loaded instructions, press [E].<br>
+                <br>
+                Instructions and architecture details are available here: <a href =''></a><br>
+            </p>
+        </div>
+    </div>
+        
+    <script src="js/system.js"></script>
+    <script src="js/cpu.js"></script>
+    <script src="js/interface.js"></script>
+</body>
+</html>
