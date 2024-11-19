@@ -88,6 +88,8 @@ class CPU {
         this.Overflow = false;
 
         this.tapeRunning = false;
+        this.ram.write(MEM_INDEX_ADDRESS, START_USER_MEMORY - 1)    // auto-set the memory index
+
         this.updateDisplay();
     }
 

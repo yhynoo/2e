@@ -1,6 +1,10 @@
 @import url('https://v1.fontapi.ir/css/SFMono');
 
 /* General styles */
+a {
+    color: wheat;
+}
+
 body {
     font-family: SF Mono, sans-serif;
     color: whitesmoke;
