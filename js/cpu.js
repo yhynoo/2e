@@ -30,7 +30,7 @@ class CPU {
         if (!this.clockRunning) return
         this.do(this.ram.read(this.Counter))
 
-        setTimeout(() => this.clock(), 50)
+        setTimeout(() => this.clock(), 45)
     }
 
     do(opcode) {
@@ -74,7 +74,7 @@ class CPU {
                 clearInterval(tapeInterval)
                 this.reset()
             }
-        }, 2000)
+        }, 900)
     }
 
     reset() {

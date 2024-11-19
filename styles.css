@@ -77,7 +77,7 @@ h1 {
 
 .diode.on {
     background: radial-gradient(circle, rgb(253, 250, 234) 0%, rgb(244, 236, 152) 80%); /* "On" state (lit diode) */
-    box-shadow: 0 0 3em rgb(233, 232, 226);
+    box-shadow: 0 0 2.5em rgb(233, 232, 226);
 }
 
 .diode.off {
