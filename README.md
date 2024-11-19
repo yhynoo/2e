@@ -24,22 +24,22 @@ When writing your own instructions, you will need to use hex values. The followi
 
 | Opcode | Mnemonic       | Description                     |
 |--------|----------------|---------------------------------|
-| `0x0`  | `WAIT`         | Wait for interrupt              |
-| `0x1`  | `SETX val`     | Set X to immediate value        |
-| `0x2`  | `LDX addr`     | Load address into X             |
-| `0x3`  | `LDXA`         | Load from address in A into X   |
-| `0x4`  | `SETA val`     | Set A to immediate value        |
-| `0x5`  | `STA addr`     | Store A in address              |
-| `0x6`  | `STAX`         | Store A in address in X         |
-| `0x7`  | `ADD`          | A = A + X                    |
-| `0x8`  | `AND`          | Bitwise AND                     |
-| `0x9`  | `XOR`          | Bitwise XOR                     |
-| `0xA`  | `ASL`          | Shift A left                    |
-| `0xB`  | `ASR`          | Shift A right                   |
-| `0xC`  | `GO addr`      | Jump to address (save return)   |
-| `0xD`  | `RET`          | Return from jump                |
-| `0xE`  | `JEQ addr`     | Jump if X = A (save return)     |
-| `0xF`  | `JOV addr`     | Jump if A overflows (save return)            |
+| `0`  | `WAIT`         | Wait for interrupt              |
+| `1`  | `SETX val`     | Set X to immediate value        |
+| `2`  | `LDX addr`     | Load address into X             |
+| `3`  | `LDXA`         | Load from address in A into X   |
+| `4`  | `SETA val`     | Set A to immediate value        |
+| `5`  | `STA addr`     | Store A in address              |
+| `6`  | `STAX`         | Store A in address in X         |
+| `7`  | `ADD`          | A = A + X                    |
+| `8`  | `AND`          | Bitwise AND                     |
+| `9`  | `XOR`          | Bitwise XOR                     |
+| `A`  | `ASL`          | Shift A left                    |
+| `B`  | `ASR`          | Shift A right                   |
+| `C`  | `GO addr`      | Jump to address (save return)   |
+| `D`  | `RET`          | Return from jump                |
+| `E`  | `JEQ addr`     | Jump if X = A (save return)     |
+| `F`  | `JOV addr`     | Jump if A overflows (save return)            |
 
 ## Additional information
-Remember to read the short instructions under the computer!
+Remember to read the short instructions under the computer! Also, it's nice to end your programs with `C, 1C`: a jump to the system's starting point.
