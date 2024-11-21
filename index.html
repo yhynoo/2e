@@ -42,8 +42,8 @@
                 </div>
         
                 <div class="register">
-                    <h2>Index</h2>
-                    <div class="diode-row" id="memory-index">
+                    <h2>Counter</h2>
+                    <div class="diode-row" id="counter">
                         <div class="diode off"></div>
                         <div class="diode off"></div>
                         <div class="diode off"></div>
@@ -93,16 +93,17 @@
         <div class = "line-container description">
             <p>
                 Press [SHIFT] to start the computer.<br>
-                [=] stops the computer, and [ESCAPE] resets it - but doesn't erase the memory.
+                [=] stops the computer, and [ESCAPE] resets it - but doesn't erase the memory.<br>
+                When the computer is switched off, you can step through instructions manually by pressing [SPACE].
             </p>
             <p class = 'grey-text'>
                 <b>Use:</b><br>
                 <br>
-                To load from tape, press [T], and press "Load Tape". Then wait until the tape finishes loading (the diode switches off).<br>
-                To reset the memory index to the beginning of user memory, press [S].<br>
-                <br>
-                To inspect user memory, press [I]. Each press will take you to the next byte.<br>
+                To load from tape, press [T], and then press "Load Tape". Then wait until the tape finishes loading (the diode switches off).<br>
                 To execute loaded instructions, press [E].<br>
+                <br>
+                To inspect user memory, press [I]. The A register will show the currently inspected address, and X will show the value.<br>
+                To move to the next address, press [M].<br>
                 <br>
                 Instructions and architecture details are available here: <a href ='https://github.com/yhynoo/2e/blob/main/README.md'>2E on GitHub</a>.<br>
             </p>

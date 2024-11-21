@@ -80,7 +80,7 @@ class CPU {
     reset() {
         this.A = 0;
         this.X = 0;
-        this.Counter = MAIN;              // start of the main sequence
+        this.Counter = MAIN;                    // start of the main sequence
         this.Stack = 0;
 
         this.Equal = false;
@@ -88,7 +88,7 @@ class CPU {
         this.Overflow = false;
 
         this.tapeRunning = false;
-        this.ram.write(MEM_INDEX_ADDRESS, START_USER_MEMORY - 1)    // auto-set the memory index
+        this.ram.write(MEM_INDEX_ADDRESS, 0)    // auto-set the memory index
 
         this.updateDisplay();
     }
@@ -97,6 +97,10 @@ class CPU {
         this.clockRunning = true
         this.clock()
         this.updateDisplay()
+    }
+
+    step() {
+        this.do(this.ram.read(this.Counter))
     }
 
     stop() {
@@ -117,7 +121,7 @@ class CPU {
 
         updateDiodeDisplay('register-x', this.X)
         updateDiodeDisplay('register-a', this.A)
-        updateDiodeDisplay('memory-index', this.ram.read(MEM_INDEX_ADDRESS))
+        updateDiodeDisplay('counter', this.Counter)
     }
 
     // -- OPERATIONS

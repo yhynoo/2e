@@ -2,7 +2,7 @@ const cpu = new CPU()
 
 // prepare the system
 
-cpu.ram.load(0, system)
+cpu.ram.load(START_SYSTEM_CODE, system)
 
 // I/O and reset processing
 
@@ -22,6 +22,12 @@ document.addEventListener('keydown', (event) => {
     if (event.key === 'Escape') {
         cpu.reset();
         return;
+    }
+
+    // stops the clock
+    if (event.key === ' ' && !clockRunning) {
+        cpu.step()
+        return
     }
     
     // stops the clock
