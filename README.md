@@ -13,7 +13,7 @@ The input is interrupt-based: the computer will show "idle" when it's ready to a
 ## Architecture
 The computer has two registers:
 - **X**: a general-purpose register, used to load from memory
-- **A**: an accumulator, used to save data to memory; holds results of arithmetic operations
+- **A**: an arithmetic register (holds the results of operations), also used to save data to memory
 
 There are also:
 - **Flags**: Overflow, Equality (`A = X`)
