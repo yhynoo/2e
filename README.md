@@ -49,7 +49,7 @@ When writing your own instructions, you will need to use hex values. The followi
 ## Use
 ### Loading and running instructions
 To load from tape, press `T`, and then press "Load Tape". Then wait until the tape finishes loading (the diode switches off). The instructions will be written starting from the currently indexed address, so you can later use this fact to correct mistakes in your code.
-To execute loaded instructions starting from address 0x00, press `E`.
+To execute loaded instructions starting from address `0x00`, press `E`.
 
 ### Editing code
 To inspect user memory, press `I`. The A register will show the currently inspected address, and X will show the value. If you want to overwrite the value, you can write it on tape and load it, so it overwrites the current one. To move to the next address, press `M`. The X register will show the previous address, and A - the current one.
