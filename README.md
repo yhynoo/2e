@@ -54,4 +54,4 @@ To execute loaded instructions starting from address 0x00, press `E`.
 ### Editing code
 To inspect user memory, press `I`. The A register will show the currently inspected address, and X will show the value. If you want to overwrite the value, you can write it on tape and load it, so it overwrites the current one. To move to the next address, press `M`. The X register will show the previous address, and A - the current one.
 
-When writing programs, it is good to end them with a jump to that address: `0C, EA`.
+The "home" address of the system (so, where it is waiting for the user's input) is `0xEA`. When writing programs, it is good to end them with a jump to that address: `0C, EA`.
