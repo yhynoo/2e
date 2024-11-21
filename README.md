@@ -20,7 +20,9 @@ There are also:
 - One-element stack for managing subroutine calls
 
 ## Output
-The output panel consists of three rows of 8 diodes each. They display the values of the X and A registers, as well as the program counter, in binary. The middle panel contains an overflow diode (A > 255), the "Idle" diode, showing whether the computer is waiting for input, and the "On" diode, showing the status of the clock.
+The output panel consists of three rows of 8 diodes each. They display the values of the X and A registers, as well as the program counter, in binary. 
+
+The middle panel contains an overflow diode (A > 255), the "Idle" diode, showing whether the computer is waiting for input, and the "On" diode, showing the status of the clock.
 
 ## Instruction Set
 When writing your own instructions, you will need to use hex values. The following table contains the entire list of available instructions:
@@ -45,9 +47,11 @@ When writing your own instructions, you will need to use hex values. The followi
 | `F`  | `JOV addr`     | Jump if A overflows (save return)            |
 
 ## Use
-To load from tape, press `T`, and then press "Load Tape". Then wait until the tape finishes loading (the diode switches off). The instructions will be written starting from the currently indexed address, so you can use this function to correct mistakes in your code.
+### Loading and running instructions
+To load from tape, press `T`, and then press "Load Tape". Then wait until the tape finishes loading (the diode switches off). The instructions will be written starting from the currently indexed address, so you can later use this fact to correct mistakes in your code.
 To execute loaded instructions starting from address 0x00, press `E`.
 
+### Editing code
 To inspect user memory, press `I`. The A register will show the currently inspected address, and X will show the value. If you want to overwrite the value, you can write it on tape and load it, so it overwrites the current one. To move to the next address, press `M`. The X register will show the previous address, and A - the current one.
 
 The computer is ready to work if the counter displays the value 0xEA [1110 - 1010] and the "Idle" diode. 
