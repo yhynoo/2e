@@ -23,12 +23,6 @@ document.addEventListener('keydown', (event) => {
         cpu.reset();
         return;
     }
-
-    // stops the clock
-    if (event.key === ' ' && !clockRunning) {
-        cpu.step()
-        return
-    }
     
     // stops the clock
     if (event.key === '=') {

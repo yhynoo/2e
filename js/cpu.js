@@ -99,10 +99,6 @@ class CPU {
         this.updateDisplay()
     }
 
-    step() {
-        this.do(this.ram.read(this.Counter))
-    }
-
     stop() {
         this.clockRunning = false
         this.updateDisplay();
