@@ -47,7 +47,7 @@ class CPU {
         }
 
         this.updateDisplay()
-        console.log(`opcode: ${this.ram.read(this.Counter)}, value ${this.ram.read(this.Counter+1)}, counter: ${this.Counter}, A: ${this.A}, X: ${this.X}`)
+        // console.log(`opcode: ${this.ram.read(this.Counter)}, value ${this.ram.read(this.Counter+1)}, counter: ${this.Counter}, A: ${this.A}, X: ${this.X}`)
     }
 
     input(value) {
@@ -117,7 +117,7 @@ class CPU {
 
         updateDiodeDisplay('register-x', this.X)
         updateDiodeDisplay('register-a', this.A)
-        updateDiodeDisplay('counter', this.Counter)
+        updateDiodeDisplay('memory-index', this.ram.read(MEM_INDEX_ADDRESS))
     }
 
     // -- OPERATIONS
